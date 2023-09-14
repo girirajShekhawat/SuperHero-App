@@ -1,7 +1,7 @@
 function refreshPage(){
   location.reload();
 }
-
+// deleting the data from localstorage
 function removefav(id){
  let charArr=JSON.parse(localStorage.getItem('favChar'));
 let index=charArr.indexOf(id.toString());
@@ -12,7 +12,7 @@ localStorage.setItem('favChar',JSON.stringify(charArr));
  refreshPage()
 }
 
-
+// this function will paint  the fav charcters
  function displayFavCharacter(character){
     let description=`
     <div class="card" style="width:10rem ;height:17rem" >
