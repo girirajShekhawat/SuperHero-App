@@ -1,0 +1,162 @@
+body{
+ margin: 0px;
+background-image: url("https://wallpapers.com/images/hd/superhero-captain-america-shield-q5s74nak8rmpei4y.webp");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+
+main{
+height:250px ;
+width: 500px;
+/* background-color: rgba(72, 61, 139,0.5); */
+background-image: url(https://i.pinimg.com/originals/a4/29/65/a429659815af6436735f156d4ab37cd5.jpg);
+background-size:cover ;
+ margin:auto; 
+margin-top:50px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+}
+
+
+#search-bar{
+    width: 400px;
+    overflow-y: hidden;
+}
+
+.search-list{
+    position: absolute;
+    left:420px;
+    top:270px;
+    transform: translate(50%);
+    z-index: 1;
+    max-height: 40vh;
+     overflow-y:scroll;  
+    
+}
+.search-list li:hover{
+    cursor: pointer;
+    background-color: beige;
+}
+
+.list-group-item{
+    display: flex;
+}
+
+.list-group-item img{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+.list-container{
+    background-color: rgba(29, 28, 28, 0.9);
+    border-radius: .5rem;
+}
+
+  
+#heroContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -20%;
+    margin-left:2% ;
+}
+.character-div:hover{
+    transform: scale(1.05);
+ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.character-div{
+margin-right: 2%;
+background-color: brown;
+}
+.character-info-div{
+height: 415px;
+width: 250px;
+border-radius: 10px;
+background-color: brown;
+overflow:hidden;
+
+}
+.character-info-div:hover{
+    transform: scale(1.05);
+ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.character-img img{
+    height: 350px;
+     width: 250px;
+    
+}
+.character-info  {
+color:white;
+font-size:20px ;
+overflow: hidden;
+}
+#info{
+    color: azure;
+   
+}
+
+@media screen and (max-width:1000px) {
+    #heroContainer{
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .character-div{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .search-list{
+        position: absolute;
+         left:10px; 
+        top:260px;
+        transform: translate(50%);
+        z-index: 1;
+        max-height: 30vh;
+         overflow-y:scroll;  
+        
+    }
+    .list-group-item img{
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+    }
+}
+
+/* repponsive for mobile */
+@media screen and (max-width: 600px){
+
+   
+    main{
+        width: 300px;
+    }
+    
+   #search-bar{
+    width: 250px;
+    overflow-y: hidden;
+    }
+    .search-list{
+        position: absolute;
+        left:-60px;
+        top:251px;
+        transform: translate(50%);
+        z-index: 1;
+        max-height: 25vh;
+         overflow-y:scroll;  
+        
+    }
+ 
+}
+@media screen and (max-width:400px) {
+    h1{
+        font-size:x-large;
+    }
+}

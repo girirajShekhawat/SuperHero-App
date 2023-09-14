@@ -1,0 +1,89 @@
+body{
+    margin: 0px;
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/24/03/41/starry-sky-2675322_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main{
+    margin:auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    }
+
+
+.card{
+ width: 50rem;
+ display: flex;
+ flex-direction: row;
+  background-color: rgba(14, 58, 124, 0.5); 
+    }
+#superHeroImg{
+width: 23rem;
+height: 25rem;
+margin: 1rem;
+}
+.card-body{
+margin: 1rem;
+}
+.card-title{
+    color: white;
+    font-size: xx-large;
+    font-family: 'Acme', sans-serif;
+}
+
+.card-text{
+    color:white;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card:hover{
+    transform: scale(1.05);
+ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+#superHeroImg:hover{
+    transform: scale(1.05);
+ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+/* css for responsive for diff sizes */
+@media screen and (max-width:1000px) {
+    .card{
+        width: 40rem;
+        display: flex;
+        flex-direction: row;
+        /* background-color: rgba(72, 61, 139,0.5); */
+           }
+           #superHeroImg{
+            width: 15rem;
+            height: 20rem;
+            margin: 1rem;
+            }
+}
+
+
+@media screen and (max-width:600px) {
+    .card{
+        width: 20rem;
+        display: flex;
+        flex-direction:column;
+        /* background-color: rgba(72, 61, 139,0.5); */
+           } 
+           #superHeroImg{
+            width: 12rem;
+            height: 14rem;
+            margin: auto;
+            margin-top: 1rem;
+            }
+} 
+
+@media screen and (max-width:400px) {
+    h1{
+        font-size:x-large;
+    }
+}
