@@ -5,9 +5,7 @@ function refreshPage(){
 function removefav(id){
  let charArr=JSON.parse(localStorage.getItem('favChar'));
 let index=charArr.indexOf(id.toString());
-console.log("first",charArr)
 charArr.splice(index,1);
-console.log(charArr)
 localStorage.setItem('favChar',JSON.stringify(charArr));
  refreshPage()
 }
@@ -32,10 +30,8 @@ localStorage.setItem('favChar',JSON.stringify(charArr));
 
 function renderFunction(){
      let charArr=JSON.parse(localStorage.getItem('favChar'));
-   console.log()
-    for(let char of charArr){
+      for(let char of charArr){
     let Url=`${marvelURL}characters/${char}?${marvelURLHeader}`;
-    console.log(Url)
     getData(Url).then((data)=>{
         // console.log(data[0])
         displayFavCharacter(data[0]);
@@ -49,11 +45,12 @@ function renderFunction(){
 function loading(){
   let charArr=JSON.parse(localStorage.getItem('favChar'));
 // checking if something is present on arr or not 
-    if(charArr!==null){
+      if(charArr!==null && charArr.length>0){
   renderFunction();
     }else {
-        console.log('hello')
-        // tell inner html that there is nothing to show please add something to the fav section 
+       // tell inner html that there is nothing to show please add something to the fav section 
+      let temp=`<h1 style="color:white">There is no Fav Superhero added</h1>`
+      document.getElementById("outerBox").innerHTML = temp; 
     }
 }
 
